@@ -1,0 +1,722 @@
+/* Bike Shed assignment */
+/* Erin Burns */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: rgb(255,255,255);  /* white */
+}
+
+main {
+  margin: 0 auto;
+  overflow: scroll;
+  min-height: 100%;
+  /* width: 100%; */
+  padding-bottom: 6rem;
+}  /* applies to index.html */
+
+.pricepage, #diymain, .workshopmain {
+  font-family: 'Open Sans', 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 1.2em;
+  color: rgb(0,0,0);
+  padding: 5% 0 5% 15%;
+  width: 90%;
+  overflow: hidden;
+} /* <main> styling for price, diy, workshop pages */
+
+
+/* ------------------- start header styles ------------------- */
+header {
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.headerinfo {
+  font-family: Signika, 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  line-height: 1.4;
+  padding: 2% 0 1% 0;
+  font-size: 1.1em;
+  text-align: center; 
+  display: block;
+}
+
+
+#logocontainer {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+  -webkit-flex-wrap: wrap; /* Safari */
+  flex-wrap:         wrap;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+} 
+
+.headerlogo {
+  display: block;
+} /* flex children properties of logocontainer */
+
+#logo {
+  width: 350px;
+  height: auto;
+}
+
+#isopen {
+  background-color: rgb(134,255,195);
+}
+
+/* ------------------- end header styles ------------------- */
+
+h1 {
+  font-family: 'Vast Shadow',  Helvetica, Arial, Impact, monospace;
+  background-color: rgb(79,79,79);
+  color: rgb(255,255,255);
+  font-size: 2.5em;
+  border-radius: 5px;
+  max-width: 85%;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Open Sans', 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 3% 0 1% 7%;
+}
+
+.homedesc {
+  /* background-color: rgb(79,79,79); */
+  font-family: Signika, 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  line-height: 1.3;
+  color: rgb(0,0,0);
+  font-size: 1.2em;
+  padding: 2% 7% 5% 15%;
+}
+
+.mainwrapper {
+  padding: 0 0 0 15%;
+}
+
+/* ------------------------------------------------------------------------- */
+/* begin expanded nav */
+/* Thank you web designer wall for this CSS snippet  */
+/* http://webdesignerwall.com/tutorials/css-responsive-navigation-menu */
+.nav {
+	position: relative;
+	margin: 20px 0;
+  font-family: 'Vast Shadow', Helvetica, Arial, Impact, monospace;
+  padding-left: 15%;
+}
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+.nav li {
+	margin: 0 5px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+.nav a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #999;
+	line-height: 100%;
+}
+.nav a:hover {
+	color: #000;
+}
+
+.nav a:active {
+	background: #999;
+	color: #fff;
+	border-radius: 5px;
+}
+/* end expanded nav */
+
+
+/* begin collapsed nav menu */
+/* Thank you web designer wall for this CSS snippet  */
+/* http://webdesignerwall.com/tutorials/css-responsive-navigation-menu */
+
+@media screen and (max-width: 600px) {
+	.nav {
+		position: relative;
+		min-height: 40px;
+	}
+
+	.nav ul {
+		width: 180px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 1%;
+		border: solid 1px rgb(79,79,79);
+		background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+		/* border-radius: 5px; */
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+
+	.nav li {
+		display: none; /* hide all <li> items */
+		margin: 0;
+	}
+
+  .nav .current {
+		display: block; /* show only current <li> item */
+	}
+
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+
+	.nav .current a {
+		background: none;
+		color: #666;
+	}
+
+	/* on nav hover */
+	.nav ul:hover {
+		background-image: none;
+	}
+
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+
+	.nav ul:hover .current {
+		background: url(images/icon-check.png) no-repeat 10px 7px;
+	}
+
+	/* right nav */
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+
+	/* center nav */
+	.nav.center ul {
+		left: 50%;
+		margin-left: -90px;
+  }
+  /* end nav style */
+
+} /* closing media query */
+  /* end collapsed nav */
+
+/* ------------------------------------------------------------------------- */
+/* begin thumbnail styles */
+.thumbnail1 {
+ background-color: rgb(134,255,195);
+}
+
+.thumbnail2 {
+ /* background-color: rgb(112,112,112); */ /* alternate color */
+ background-color: rgb(242,185,29);
+}
+
+.thumbnail3 {
+ background-color: rgb(212,93,93);
+}
+
+.thumbnail4 {
+ background-color: rgb(97,88,166);
+}
+
+ /* end thumbnail styles */
+
+/* begin thumbnail link styling */
+.mainwrapper a {
+  text-decoration: none;
+  font-family: 'Bungee Inline', Helvetica, Arial, Impact, monospace;
+  font-size: 1.4em;
+  color: rgb(10,11,20);
+  text-align: center;
+  display: block;
+}
+
+.mainwrapper a:visited {
+  border-bottom: 3px dashed rgb(10,11,20);
+  font-size: 1.4em;
+}
+
+.mainwrapper a:hover {
+  text-decoration: underline;
+  border-width: 50%;
+  font-style: italic;
+}
+
+.mainwrapper a:focus a:active {
+  border-bottom: 3px solid rgb(10,11,20);
+  font-style: italic;
+  color: rgba(10,11,20, 0.5);
+}
+/* end thumbnail link styling */
+
+
+
+/* begin default thumbnail sizing and style */
+
+  .flexcontainer {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-direction: column; /* Safari */
+    flex-direction:         column;
+    -webkit-flex-wrap: wrap; /* Safari */
+    flex-wrap:         wrap;
+    flex-grow: 1;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+    .thumbnail1 {
+     width: 85%;
+     margin-bottom: 20px;
+     padding: 5px 0 10px 0;
+    }
+
+    .thumbnail2 {
+     width: 85%;
+     margin-bottom: 20px;
+     padding: 5px 0 10px 0;
+    }
+
+    .thumbnail3 {
+     width: 85%;
+     margin-bottom: 20px;
+     padding: 5px 0 10px 0;
+    }
+
+    .thumbnail4 {
+     width: 85%;
+     margin-bottom: 20px;
+     padding: 5px 0 10px 0;
+    }
+
+ /* end thumbnail styles */
+
+
+ /* media query for thumbnails */
+
+ @media screen and (min-width: 882px) {
+
+   .flexcontainer {
+     display: inline-block;    /* arranges blocks side by side */
+   }
+
+   .thumbnail1 {
+    width: 45%;
+    float: left;
+   }
+
+   .thumbnail2 {
+    width: 45%;
+    float: right;
+    margin-right: 5%;
+   }
+
+   .thumbnail3 {
+    width: 45%;
+    float: left;
+   }
+
+   .thumbnail4 {
+    width: 45%;
+    float: right;
+    margin-right: 5%;
+   }
+ }
+
+ /* ending media query for thumbnails */
+
+
+/* images */
+.mainimg {
+  width: 100%;
+  height: auto;
+}
+
+
+/* ------------------ PRICES ------------------------------------------------ */
+/*  begin styles for prices.html page*/
+.nav .prices a {
+	background: rgb(134,255,195);
+	color: #000000;
+	border-radius: 5px;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 3% 0 3% 0;
+}
+
+.pricepage summary:hover{
+   color: rgb(76,178,128);
+   cursor: pointer;
+}
+
+.pricepage p {
+  max-width: 90%;
+  padding: 3% 0 0 7%;
+  font-weight: bold;
+}
+
+.pricepage li {
+  padding-left: 7%;
+  max-width: 85%;
+  line-height: 1.7;
+}
+
+.priceimg {
+  width: 100%;
+  height: auto;
+}
+
+
+/*  end styles for prices.html page */
+
+
+/* -------------------------------------------------------------------------- */
+/* begin workshop page style */
+
+.workshopmain p {
+  padding-top: 3%;
+  max-width: 85%;
+}
+
+.nav .workshops a {
+  background: rgb(242,185,29);
+  color: #000000;
+  border-radius: 5px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* begin DIY page style */
+
+.nav .diy a {
+	background: rgb(212,93,93);
+	color: #000000;
+	border-radius: 5px;
+}
+
+
+#diymain h2, .workshopmain h2, #errormain h2 {
+  max-width: 90%;
+  padding: 3% 0 0 7%;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+details p {
+  line-height: 1.8;
+  max-width: 90%;
+  padding: 3% 0 0 7%;
+}
+
+#diymain li, .workshopmain li {
+  padding-left: 7%;
+  max-width: 85%;
+  line-height: 1.7;
+}
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:7.5%;
+	width:80%;
+	height:80%;
+}
+
+#diymain ol {
+  list-style: inside decimal-leading-zero;
+}
+
+.tip {
+  font-weight: bold;
+  font-style: italic;
+}
+
+#diymain ul {
+  list-style: circle inside;
+}
+
+#diymain summary:hover{
+   color: rgb(212,93,93);
+   cursor: pointer;
+}
+
+#diymain img {
+  width: 65%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 4% 0 0;
+}
+
+@media screen and (min-width: 665px) {
+  #diymain img {
+    float: left;
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+/* end DIY page style */
+
+/* ------------------ CONTACT ----------------------------------------------- */
+/*  begin styles for contact.html page*/
+
+.nav .contact a {
+  background: rgb(97,88,166);
+  color: #000000;
+	border-radius: 5px;
+}
+
+.contactmain {
+  margin: 0 auto;
+  font-family: 'Open Sans', 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 1.2em;
+  color: rgb(0,0,0);
+  padding: 5% 0 5% 15%;
+  width: 85%;
+  height: auto;
+}
+
+.contactmain h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+.contacthours, .contactlocation {
+  padding: 2% 0 5% 0;
+}
+
+/* ------------- map styling -------------  */
+
+#mapcontainer {
+  padding: 2% 0 5% 0;
+  height: 50%;
+  max-width: 85%;
+}
+
+#mapcontainer iframe {
+  margin: 0 auto;
+  width: 99%;
+}
+
+/* ------------- end map styling -------------  */
+
+
+/* ------------- begin form styles-------------  */
+
+#formwrapper {
+  max-width: 85%;
+}
+
+ form {
+   position: relative;
+   background-color: rgba(79,79,79,0.5);
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+ }
+
+input, textarea, button {
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+  -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+  box-sizing: border-box;
+}   /* makes sizing uniform */
+
+ label {
+   font-family: 'Signika', 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+   font-size: 1.2em;
+   margin: 3% 0 0 3%;
+ }
+
+.space {
+  padding-top: 5%;
+}  /* adding space to top of form between "name" and form edge */
+
+  input {
+    font-family: 'Signika', 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+    font-size: 1.1em;
+    margin: 2%;
+    width: 90%;  /* input box width */
+  }
+
+  textarea {
+    font-family: 'Signika', 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+    font-size: 1.1em;
+    display: block;
+    margin: 3% 0 0 3%;
+    width: 90%;
+    resize: vertical;
+    overflow: auto;
+  }  /*  <<< height property not responding  >>> */
+
+  button {
+    margin: 2% 0 3% 3%;
+  }
+/* ------------- end form styles-------------  */
+
+/*  ---------------- end styles for contact.html page ------------------ */
+
+/*  ---------------- begin 404 page styles ------------------ */
+#errormain {
+  margin: 0 auto;
+  /* background-image: url("../images/red-phone.jpg");
+  background-repeat: no-repeat;  */
+  width: 75%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+#errormain h1 {
+  position: relative;
+  top: 5%;
+  width: 70%;
+  z-index: 3;
+  margin: 0 auto;
+}
+
+#errormain img {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 998px) {
+  #errormain h1 {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 50%;
+    z-index: 3;
+  }
+
+  #errormain img {
+    visibility: visible;
+  }
+}
+
+
+/*  ---------------- end 404 page styles ------------------ */
+
+/* ------------------ begin footer style --------------------------- */
+
+  footer {
+    min-width: 100%;
+    clear: both;
+    background-color: rgb(79,79,79);
+    font-family: Signika, 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+    color: rgb(255,255,255);
+    font-size: 1.1em;
+    overflow: hidden;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .footerwrapper {
+    padding: 5%;
+  }
+
+  .location, .hours, .social {
+    margin-bottom: 3%;
+    margin-left: 5%;
+    line-height: 1.7;
+  }
+
+  .social {
+    margin-right: 5%;
+  }
+
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer img {
+  height: auto;
+  width: 15%;
+  margin-top: 3%;
+}
+
+
+ /* ---------------- media queries  ---------------- */
+/* begin footer media query  */
+
+  @media screen and (min-width: 665px)  {
+    .footerwrapper {
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      -webkit-flex-direction: row; /* Safari */
+      flex-direction:         row;
+      -webkit-flex-wrap: nowrap; /* Safari */
+      flex-wrap:         nowrap;
+      flex-grow: 1;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+    }
+  }
+ /* end footer media query */
+
+ /* -------- media query styles for larger screens -------- */
+ @media screen and (min-width: 665px)  {
+
+    /* contact page */
+   .contacthours {
+     width: 70%;
+     float: right;
+   }
+
+   .contactlocation {
+     float: left;
+     width: 30%;
+   }
+
+   /* header */
+   #logocontainer {
+     display: -webkit-flex; /* Safari */
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-flex-direction: row; /* Safari */
+     flex-direction:         row;
+     /* -webkit-flex-wrap: wrap; /* Safari */
+     /* flex-wrap:         wrap;  */
+     -webkit-justify-content: space-between;
+     justify-content: space-between;
+   }
+
+   .headerlogo, .headerinfo {
+     margin: 1%;
+     display: block;
+   }
+
+    .headerinfo {
+      max-width: 32%;
+      text-align: left;
+    }
+
+ }  /* closing media query for larger screens */

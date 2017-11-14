@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?3rin6urns.com/.*$ [NC]
+RewriteRule \.(gif|jpg|js|css|png|svg)$ - [F]
+
+ErrorDocument 404 /error/404.html

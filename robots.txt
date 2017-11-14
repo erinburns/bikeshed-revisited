@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /includes/
+
+
+Sitemap: http://3rin6urns.com/coursework/bikeshed-revisited/sitemap.xml
